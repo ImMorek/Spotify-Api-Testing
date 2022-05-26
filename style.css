@@ -1,0 +1,96 @@
+body {
+    background-color: rgb(55, 55, 48);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    text-align: center;
+    margin: 0 0 0 0;
+}
+header {
+    background-color: rgb(94, 207, 81);
+    color: white;
+    top: 0px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    padding: 1px;
+    filter: drop-shadow(0 0 0.95rem rgb(0, 0, 0));
+}
+header h1 {
+    vertical-align:top;
+    font-size: 120px;
+}
+.SpotifySongStats {
+    text-align: left;
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.InputText {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    width: 330px;
+    height: 45px;
+    background-color: rgb(77, 79, 82);
+    padding-top: 20px;
+    border-radius: 50px;
+    font-size: larger;
+}
+.songInput {
+    margin-top: 20px;
+    width: 330px;
+}
+.SongsOutImg {
+    /* margin-top: 20px; */
+    width: auto;
+    filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+}
+.SongsOutTxt {
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: 800px;
+}
+.DisplayGrid {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    letter-spacing: 1.5px;
+    color: white;
+    column-gap: 50px;
+    row-gap: 50px;
+    padding-left: 10px;
+    padding-top:80px;
+    margin-right: 60px;
+}
+.DisplayGrid h2 {
+    font-size: 40px;
+}
+.DisplayGrid h3 {
+    font-size: 20px;
+}
+.Name {
+    font-family: 'Courier New', monospace;
+}
+.PlaylistCover {
+    filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+}
+progress{
+    accent-color: rgb(94, 207, 81);
+    width: 400px;
+    filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+  }
+  footer {
+      text-align: left;
+      color: rgb(189, 189, 189);
+      background-color: rgb(36, 35, 39);
+      height: 160px;
+      margin-top: 80px;
+      filter: drop-shadow(0 0 0.25rem rgb(0, 0, 0));
+      font-family: 'Courier New', monospace;
+  }
+footer h3 {
+    padding-top: 30px;
+    padding-left: 50px;
+}
+.TimeListened {
+    padding-left: 70px;
+    font-size: 30px;
+    bottom: 0px;
+}

@@ -5,16 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./apitest.js" defer></script>
-    <title>Document</title>
+    <title>Spotify Song Stats</title>
+    <link href="./style.css" rel="stylesheet">
 </head>
 <body>
-    <div id="SpotifySongStats">
-        <div data-output class="output">Input song link here:</div>
+    <header>
+        <h1>What am i listening to</h1>
+    </header>
+    <!-- <div class="SpotifySongStats">
+        <div class="InputText">Vlož odkaz na skladbu:</div>
         <div class="songInput">
             <input data-spotifyLinkInput type="text" name="linkInput"/>
-        </div>
-        <button data-search>Search</button>
-    </div>
+        </div> -->
 
+        <div class="DisplayGrid">
+            <div class="SongsOutImg DisplayGridItem">
+            </div>
+            <div class="SongsOutTxt DisplayGridItem">
+                <h2><output class="Name" type="text"></output></h2>
+                <h3><output class="Artist" type="text"></output></h3>
+                <h3><output class="Album" type="text"></output></h3>
+                <div class="ProgressBar">
+                </div>
+                <div class="Status">
+                </div>
+            </div>
+
+            <div class="DisplayGridItem SongsInformationGrid">
+                <div class="PlaylistCover InformationGridItem"></div>
+                <div class="PlaylistInfo InformationGridItem">
+                    <h4><output class="PlaylistName" type="text"></output></h4>
+                    <h5><output class="PlaylistOwner" type="text"></output></h5>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div>
+            <h3>Total Time Listened:</h3>
+            <div class="TimeListened"></div>
+            </div>
+        </footer>
 </body>
 </html>
