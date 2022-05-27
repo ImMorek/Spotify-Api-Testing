@@ -100,11 +100,20 @@ let currentSong = _getListeningToTrack()
 currentSong
     .then(res => {
                     callAfterDataRecieved(res);
-                    let currentPlaylist = _getCurrentPlaylist(res.context.external_urls.spotify.substring(34));
-                    IsPlaying = res.is_playing
-                    currentPlaylist
+                    if(res.context != undefined) {
+                        let currentPlaylist = _getCurrentPlaylist(res.context.external_urls.spotify.substring(34));
+                        currentPlaylist
                         .then(res => {callAfterPlaylistRecieved(res);})
                         .catch((err) => console.log("Error: " + err));
+                    }
+                    else {
+                        document.querySelector(".PlaylistCover").innerHTML = ``
+                        document.querySelector(".PlaylistName").innerHTML = ``
+                        document.querySelector(".PlaylistOwner").innerHTML = ``
+                    }
+                    CurrentTime = res.progress_ms
+                    SongLength = res.item.duration_ms
+                    IsPlaying = res.is_playing
                 })
     .catch((err) => {console.log("Error: " + err)
 
@@ -125,18 +134,25 @@ setInterval(function(){
 currentSong
     .then(res => {
                     callAfterDataRecieved(res);
-                    let currentPlaylist = _getCurrentPlaylist(res.context.external_urls.spotify.substring(34));
+                    if(res.context != undefined) {
+                        let currentPlaylist = _getCurrentPlaylist(res.context.external_urls.spotify.substring(34));
+                        currentPlaylist
+                        .then(res => {callAfterPlaylistRecieved(res);})
+                        .catch((err) => console.log("Error: " + err));
+                    }
+                    else {
+                        document.querySelector(".PlaylistCover").innerHTML = ``
+                        document.querySelector(".PlaylistName").innerHTML = ``
+                        document.querySelector(".PlaylistOwner").innerHTML = ``
+                    }
                     CurrentTime = res.progress_ms
                     SongLength = res.item.duration_ms
                     IsPlaying = res.is_playing
-                    currentPlaylist
-                        .then(res => {callAfterPlaylistRecieved(res);})
-                        .catch((err) => console.log("Error: " + err));
                 })
     .catch((err) => {
             console.log("Error: " + err);
             FailedToLoad = true;});
-}, 15000);
+}, 5000);
 let TimePlayedS = localStorage.getItem("time");
 
 let CurrentTime = 0;
